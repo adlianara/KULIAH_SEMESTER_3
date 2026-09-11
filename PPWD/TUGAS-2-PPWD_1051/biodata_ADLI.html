@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Biodata Diri\\</title>
+
+    <style>
+
+        /* MODE GELAP */
+
+        body.mode-gelap {
+            background-color: #222222;
+            color: #eeeeee;
+        }
+
+        body.mode-gelap .kotak-info,
+        body.mode-gelap #formPendaftaran {
+            background-color: #333333;
+            color: #eeeeee;
+        }
+
+        body.mode-gelap .judul-sub {
+            color: #eeeeee;
+        }
+
+        body.mode-gelap .teks-rapi {
+            color: #eeeeee;
+        }
+
+        body.mode-gelap .tabel-data td {
+            color: #eeeeee;
+        }
+
+        body.mode-gelap .input-field {
+            background-color: #444444;
+            color: white;
+            border-color: #777777;
+        }
+
+        body.mode-gelap a {
+            color: #66aaff;
+        }
+
+        #tombolTema {
+            margin: 10px 0;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        body {
+            font-family: Times New Roman, sans-serif; margin: 20px; color: #222222;
+        }
+
+        header {
+            background-color: #2563EB;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+        }
+
+        nav {
+            background-color: #F8FAFC;
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        nav a {
+            color: #2563EB;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        blockquote {
+            border-left: 4px solid #2563EB;
+            margin: 10px 0;
+            padding: 8px 16px;
+            background-color: #f7f7f7;
+            font-style: italic;
+            color: #444444;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        figure img {
+            width: 400px;
+            height: 250px;
+            border: 4px solid #2563EB;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            font-size: 14px;
+            color: #666666;
+            margin-top: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #777777;
+        }
+
+        /* ===== Selektor class: dipakai berulang pada beberapa elemen ===== */
+        .judul-bagian {
+            color: #2563EB;
+            border-bottom: 2px solid #2563EB;
+            padding-bottom: 4px;
+        }
+
+        .judul-sub {
+            color: #333333;
+        }
+
+        .teks-rapi {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: khaki;
+        }
+
+        .tabel-layout {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .kolom-utama {
+            width: 70%;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        .kolom-samping {
+            width: 30%;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        .kotak-info {
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #dddddd;
+        }
+
+        .kotak-info h3 {
+            margin-top: 0;
+            color: #2563EB;
+        }
+
+        .tabel-data {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #cccccc;
+        }
+
+        .tabel-data th,
+        .tabel-data td {
+            padding: 8px;
+            border: 1px solid #cccccc;
+        }
+
+        .tabel-data th {
+            background-color: #2563EB;
+            color: white;
+        }
+
+        .baris-selang {
+            background-color: #f7f7f7;
+        }
+
+        .label-form {
+            font-weight: bold;
+        }
+
+        .input-field {
+            padding: 6px;
+            border: 1px solid #999999;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+
+        .btn-submit {
+            background-color: seagreen;
+            color: white;
+            padding: 8px 18px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-reset {
+            background-color: #cccccc;
+            color: #222222;
+            padding: 8px 18px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 8px;
+        }
+
+        /* ===== Selektor id: khusus untuk satu elemen unik ===== */
+        #formPendaftaran {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+
+        .spasi-kiri {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= BAGIAN KEPALA / HEADER ================= -->
+    <header>
+        <h1>BIODATA DIRI</h1>
+        <p><em>Selamat datang di website pribadi Adli Anara Sofian.</em></p>
+    </header>
+
+    <hr>
+
+    <!-- ================= MENU NAVIGASI ================= -->
+    <nav>
+        <b>Menu:</b>
+        <a href="#tentang">Tentang saya</a> |
+        <a href="#koleksi">Profil</a> |
+        <a href="#galeri">Galeri</a> |
+        <a href="#pendaftaran">Kontak</a>
+    </nav>
+
+    <button id="tombolTema" type="button">🌙 Mode Gelap</button>
+
+    <hr>
+
+    <!-- ================= ISI UTAMA ================= -->
+    <main>
+
+        <!-- Layout dua kolom menggunakan tabel, ditata dengan class -->
+        <table class="tabel-layout">
+            <tr>
+                <!-- Kolom kiri: isi utama -->
+                <td class="kolom-utama">
+
+                    <section id="tentang">
+                        <h2 class="judul-bagian">Tentang Saya</h2>
+                        <p class="teks-rapi">
+                            Halo! Perkenalkan, nama saya <b>Adli Anara Sofian</b>. Saya
+                            lahir di <i>Sungai Raya, Pontianak</i>, pada tanggal 15
+                            Desember 2007. Saya merupakan anak ketiga dari empat bersaudara
+                            dan saat ini berusia 18 tahun.
+                        </p>
+                        <p class="teks-rapi">
+                            Saat ini saya sedang menempuh pendidikan di bidang <b>Sistem Informasi</b>.
+                            Saya memiliki ketertarikan untuk terus belajar hal-hal baru, khususnya
+                            di bidang teknologi dan pengembangan diri. Saya percaya bahwa
+                            <mark class="highlight">proses belajar dan konsistensi adalah kunci untuk berkembang</mark>.
+                        </p>
+
+                        <blockquote>
+                            "Tidak harus hebat untuk memulai, tetapi harus memulai untuk menjadi hebat."
+                             &mdash; Adli Anara Sofian
+                        </blockquote>
+                    </section>
+
+                    <section id="koleksi">
+                        <h2 class="judul-bagian">Profil & Informasi Pribadi</h2>
+
+                        <h3 class="judul-sub">Bidang yang Sedang Dipelajari</h3>
+                        <ol>
+                            <li>Object Oriented Programming</li>
+                            <li>UI/UX Design</li>
+                            <li>Project Management</li>
+                        </ol>
+
+                        <h3 class="judul-sub">Aktivitas yang Disukai</h3>
+                        <ol>
+                            <li>Belajar dan mengeksplorasi hal baru.</li>
+                            <li>Mengembangkan kemampuan di bidang teknologi.</li>
+                            <li>Melakukan olahraga untuk menjaga kesehatan.</li>
+                        </ol>
+
+                        <h3 class="judul-sub">Hobi & Olahraga Favorit</h3>
+                        <table class="tabel-data">
+                            <tr>
+                                <th>No</th>
+                                <th>Jenis Kegiatan</th>
+                                <th>Rating</th>
+                            </tr>
+                            <tr>
+                                <td>1.</td>
+                                <td>Angkat Beban</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="baris-selang">
+                                <td>2.</td>
+                                <td>Bola Basket</td>
+                                <td>4</td>
+                            </tr>
+                        </table>
+                    </section>
+
+                </td>
+
+                <!-- Kolom kanan: informasi tambahan -->
+               <td class="kolom-samping">
+                    <aside class="kotak-info">
+                        <h3>Informasi Singkat</h3>
+                        <p><small>Nama: Adli Anara Sofian.</small></p>
+                        <p><small>Status: Mahasiswa.</small></p>
+                        <p><small>Program Studi: Sistem Informasi.</small></p>
+                        <p><small>Hobi: Belajar hal baru dan olahraga.</small></p>
+                        <p><small>Prinsip: Terus berkembang menjadi lebih baik.</small></p>
+                    </aside>
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- ================= GALERI GAMBAR ================= -->
+       <section id="galeri">
+            <h2 class="judul-bagian">Galeri Pribadi</h2>
+            <figure>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyYNAdnIq6p3RjRP6GHxosEi45_Fe9WGACg1DI3hmykA&s=10"
+                    alt="Logo Universitas Tanjungpura">
+                <figcaption>Gambar 1. Universitas Tanjungpura, tempat saya menempuh pendidikan.</figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <!-- ================= FORM PENDAFTARAN ================= -->
+        <section id="pendaftaran">
+            <h2 class="judul-bagian">Formulir Kontak</h2>
+
+            <form id="formPendaftaran" action="#" method="post">
+
+                <p>
+                    <label for="nama" class="label-form">Nama Lengkap:</label><br>
+                    <input type="text" id="nama" name="nama" class="input-field"
+                           placeholder="Tulis nama Anda" size="30">
+                </p>
+
+                <p>
+                    <label for="email" class="label-form">Email:</label><br>
+                    <input type="email" id="email" name="email" class="input-field"
+                           placeholder="nama@email.com" size="30">
+                </p>
+
+                <p>
+                    <label for="nim" class="label-form">Nomor Telepon:</label><br>
+                    <input type="number" id="nim" name="nim" class="input-field">
+                </p>
+
+                <p>
+                    <span class="label-form">Jenis Kelamin:</span><br>
+                    <input type="radio" id="lk" name="jk" value="Laki-laki">
+                    <label for="lk">Laki-laki</label>
+                    <input type="radio" id="pr" name="jk" value="Perempuan" class="spasi-kiri">
+                    <label for="pr">Perempuan</label>
+                </p>
+
+                <p>
+                    <span class="label-form">Minat & Hobi:</span><br>
+                    <input type="checkbox" id="teknologi" name="minat" value="Teknologi">
+                    <label for="teknologi">Teknologi</label>
+                    <input type="checkbox" id="fiksi" name="minat" value="Fiksi" class="spasi-kiri">
+                    <label for="fiksi">Olahraga</label>
+                </p>
+
+                <p>
+                    <label for="prodi" class="label-form">Program Studi:</label><br>
+                    <select id="prodi" name="prodi" class="input-field">
+                        <option value="si">Sistem Informasi</option>
+                        <option value="if">Informatika</option>
+                        <option value="mtk">Matematika</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="alasan" class="label-form">Pesan untuk saya:</label><br>
+                    <textarea id="alasan" name="alasan" rows="4" cols="40" class="input-field"></textarea>
+                    <small id="hitungKarakter">0 karakter</small>
+                </p>
+
+                <p>
+                    <input type="submit" value="Kirim" class="btn-submit">
+                    <input type="reset" value="Bersihkan" class="btn-reset">
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- ================= BAGIAN KAKI / FOOTER ================= -->
+    <footer>
+        <p><small>&copy; 2026 Biodata diri Adli. Dibuat untuk bahan pembelajaran praktikum.</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
